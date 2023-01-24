@@ -84,10 +84,7 @@ All of the following files are programs written in js:
 
 |Filename| Description|
 |-------|---------------|
-|`0-constants.js`|Modify:
-
-* function taskFirst to instantiate variables using const
-* function taskNext to instantiate variables using let|
+|`0-constants.js`|Modify: * function taskFirst to instantiate variables using const * function taskNext to instantiate variables using let|
 |||
 |||
 |||
