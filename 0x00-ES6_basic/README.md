@@ -1,5 +1,6 @@
 # ECMAScript 6 - Basic
-<img src="https://media.sitepen.com/blog-images/2016/04/es6_symbols_header-1-1024x672.png" width="400px"/>
+<img src="https://media.sitepen.com/blog-images/2016/04/es6_symbols_header-1-1024x672.png" width="600px"/>
+
 ## Resources
 Read or watch:
 
