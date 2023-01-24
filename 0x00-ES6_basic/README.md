@@ -1,27 +1,30 @@
 # ECMAScript 6 - Basic
+Project done during ALX Software Engineering Scholarship Programme 2022 at Alx Students Education. It aims to learn about what ES6 is, new features in ES6, blocked scoped variables, string templating in ES6, etc.
 <img src="https://media.sitepen.com/blog-images/2016/04/es6_symbols_header-1-1024x672.png" width="600px"/>
 
 ## Resources
 Read or watch:
 
-* [ECMAScript 6 - ECMAScript 2015]()
-* [Statements and declarations]()
-* [Arrow functions]()
-* [Default parameters]()
-* [Rest parameter]()
-* [Javascript ES6 — Iterables and Iterators]()
+* [ECMAScript 6 - ECMAScript 2015](https://www.w3schools.com/js/js_es6.asp)
+* [Statements and declarations](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements)
+* [Arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+* [Default parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
+* [Rest parameter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+* [Javascript ES6 — Iterables and Iterators](https://towardsdatascience.com/javascript-es6-iterables-and-iterators-de18b54f4d4)
 
 ## Configuration
 - curl -sL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh
 - sudo bash nodesource_setup.sh
 - sudo apt install nodejs -y
+
+Install Jest, Babel, and ESLint in your project directory
+
 - npm install --save-dev jest
 - npm install --save-dev babel-jest @babel/core @babel/preset-env
 - npm install --save-dev eslint
 
 ## Configuration files
-- package.json
-<details><summary>click to see code</summary>
+<details><summary>package.json</summary>
 {
   "scripts": {
     "lint": "./node_modules/.bin/eslint",
@@ -42,7 +45,61 @@ Read or watch:
   }
 }
 </details>
-- babel.config.js
-- .eslintrc.js
+
+<details><summary>babel.config.js</summary>module.exports = {
+  presets: [
+    [
+      '@babel/preset-env',
+      {
+        targets: {
+          node: 'current',
+        },
+      },
+    ],
+  ],
+};</details>
+
+<details><summary>.eslintrc.js</summary>module.exports = {
+  presets: [
+    [
+      '@babel/preset-env',
+      {
+        targets: {
+          node: 'current',
+        },
+      },
+    ],
+  ],
+};</details>
 
 run `npm install`
+
+## Technologies
+* JavaScript transpiled using babel.js
+* Tested on Ubuntu 18.04 LTS
+* nodejs -v(v12.22.12), npm -v(6.14.16)
+
+## Files
+All of the following files are programs written in js:
+
+|Filename| Description|
+|-------|---------------|
+|`0-constants.js`|Modify:
+
+* function taskFirst to instantiate variables using const
+* function taskNext to instantiate variables using let|
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
