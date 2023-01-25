@@ -5,16 +5,16 @@ Project done during ALX Software Engineering Scholarship Programme 2022 at Alx S
 
 ## Resources
 Read or watch:
-* [Promise]()
-* [JavaScript Promise: An introduction]()
-* [Await)[]
-* [Async]()
-* [Throw / Try]()
+* [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+* [JavaScript Promise: An introduction](https://web.dev/promises/)
+* [Await][https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await]
+* [Async](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+* [Throw / Try](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw)
 ## Configuration
 - curl -sL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh
 - sudo bash nodesource_setup.sh
 - sudo apt install nodejs -y
-
+ * note all user have complained of error when installed Jest and Babel. Create the configuration files first before install. i followed ALX instruction (installation first before config files created and i didn't encounter any issue)
 Install Jest, Babel, and ESLint in your project directory
 
 - npm install --save-dev jest
@@ -95,5 +95,16 @@ run `npm install`
 All of the following files are programs written in js:
 
 |Filename| Description|
-|-------|---------------|
-
+|----------|--------------------|
+| **utils.js**                    | Utilities js                                                   |
+| `0-main.js, promise.js`         | Keep every promise you make and only make promises you can keep |
+| `1-main.js, 1-promise.js`       | Don't make a promise...if you know you can't keep it            |
+| `2-main.js, 2-then.js`          | Catch me if you can!                                            |
+| `3-main.js, 3-all.js`           | Handle multiple successful promises                             |
+| `4-main.js, 4-user-promise.js`  | Simple promise                                                  |
+| `5-main.js, 5-photo-reject.js`  | Reject the promises                                             |
+| `6-main.js, 6-final-user.js`    | Handle multiple promises                                        |
+| `7-main.js, 7-load_balancer.js` | Load balancer                                                   |
+| `8-main.js, 8-try.js`           | Throw error / try catch                                         |
+| `9-main.js, 9-try.js`           | Throw an error                                                  |
+| `100-main.js, 100-await.js`     | Await / Async                                                   |
