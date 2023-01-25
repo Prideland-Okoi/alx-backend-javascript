@@ -1,4 +1,4 @@
-//don't make a promise...if you know you cn't keep it
+// don't make a promise...if you know you cn't keep it
 function getFullResponseFromAPI(success) {
   return new Promise((resolve, reject) => {
     if (success) {
