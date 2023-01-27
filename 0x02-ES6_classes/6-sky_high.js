@@ -22,4 +22,3 @@ class SkyHighBuilding extends Building {
 }
 
 export default SkyHighBuilding;
-
