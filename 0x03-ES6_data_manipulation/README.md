@@ -1,7 +1,7 @@
 # 0x03. ES6  Data Management
 Project done during ALX Software Engineering Scholarship Programme 2022 at Alx Students Education. It aims to learn about How to use map, filter and reduce on arrays, Typed arrays, The Set, Map, and Weak link data structures, etc. 
 
-<img src="https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2019/12/6ab7bec4727cb5c91257.jpg" width="600px"/>
+<img src="https://pbs.twimg.com/media/EXfQfWdXsAEtzsC?format=jpg&name=small" width="600px"/>
 
 ## Resources
 Read or watch:
