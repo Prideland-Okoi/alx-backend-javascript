@@ -6,7 +6,6 @@ const port = 1245;
 const app = http.createServer(async(req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
-  const {url} = req;
 
   if (req.url === '/') {
     res.end('Hello Holberton School!');
