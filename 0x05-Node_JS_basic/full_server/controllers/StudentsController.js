@@ -1,34 +1,42 @@
-const readDatabase = require('../utils');
+import readDatabase from '../utils';
 
 class StudentsController {
-  static getAllStudents(request, response) {
-    response.statusCode = 200;
-    response.setHeader('Content-Type', 'text/plain');
-    response.write('This is the list of our students\n');
-    readDatabase('./database.csv').then((data) => {
-      response.write(`Number of students in CS: ${data.CS.length}. List: ${data.CS.join(', ')}\n`);
-      response.write(`Number of students in SWE: ${data.SWE.length}. List: ${data.SWE.join(', ')}\n`);
-      response.end();
-    }).catch((err) => response.write(err.message))
-      .finally(() => {
-        response.end();
+  static getAllStudents(request, response, DATABASE) {
+    readDatabase(DATABASE)
+      .then((fields) => {
+        const students = [];
+
+        let msg;
+
+        students.push('This is the list of our students');
+
+        for (const key of Object.keys(fields)) {
+          msg = `Number of students in ${key}: ${fields[key].length
+          }. List: ${fields[key].join(', ')}`;
+
+          students.push(msg);
+        }
+        response.send(200, `${students.join('\n')}`);
+      })
+      .catch(() => {
+        response.send(500, 'Cannot load the database');
       });
   }
 
-  static getAllStudentsByMajor(request, response) {
-    response.statusCode = 200;
-    response.setHeader('Content-Type', 'text/plain');
+  static getAllStudentsByMajor(request, response, DATABASE) {
     const { major } = request.params;
+
     if (major !== 'CS' && major !== 'SWE') {
-      response.statusCode = 500;
-      response.write('Major parameter must be CS or SWE\n');
-      response.end();
-      return;
+      response.send(500, 'Major parameter must be CS or SWE');
+    } else {
+      readDatabase(DATABASE)
+        .then((fields) => {
+          const students = fields[major];
+
+          response.send(200, `List: ${students.join(', ')}`);
+        })
+        .catch(() => response.send(500, 'Cannot load the database'));
     }
-    readDatabase('./database.csv').then((data) => {
-      response.write(`List: ${data[major].join(', ')}\n`);
-      response.end();
-    }).catch((err) => response.send(err.message));
   }
 }
 
