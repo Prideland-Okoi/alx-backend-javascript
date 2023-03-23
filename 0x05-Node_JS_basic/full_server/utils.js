@@ -16,16 +16,16 @@ async function countStudents(path) {
       field: student[3],
     }));
   const fields = students.map((student) => student.field);
-  const unique_fields = new Set(fields);
-  const students_by_field = {};
-  for (const field of unique_fields) {
-    students_by_field[field] = [];
+  const uniqueFields = new Set(fields);
+  const studentsByField = {};
+  for (const field of uniqueFields) {
+    studentsByField[field] = [];
   }
   for (const student of students) {
-    students_by_field[student.field].push(student.firstName);
+    studentsByField[student.field].push(student.firstName);
   }
-  console.log(students_by_field);
-  return students_by_field;
+  console.log(studentsByField);
+  return studentsByField;
 }
 
 module.exports = countStudents;
